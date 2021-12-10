@@ -1,0 +1,19 @@
+{
+    "name": "Veil 1",
+    "symbol": "",
+    "image": "1.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "1.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "CPwcqjS76Y9C4EPTUuAJZDxtwHcqT4MLn7ceHxa1JJkV",
+          "share": 100
+        }
+      ]
+    }
+  }

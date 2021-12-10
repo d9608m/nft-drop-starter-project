@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import CandyMachine from './CandyMachine';
+
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -69,11 +71,12 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">🍭 Candy Drop</p>
-          <p className="sub-text">NFT drop machine with fair mint</p>
-          {/* Add the condition to show this only if we don't have a wallet address */}
+          <p className="header">🌌 Nebula NFT Drop</p>
+          <p className="sub-text">Mint your own NFT of the Veil Nebula!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
+        {/* Check for walletAddress and then pass in walletAddress */}
+      {walletAddress && <CandyMachine walletAddress={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
@@ -81,7 +84,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`Thanks to @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
